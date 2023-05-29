@@ -4,8 +4,6 @@ import java.sql.Date;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-import hotel.casanova.dto.ListadoReserva;
-import hotel.casanova.dto.ReservaDTO;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -32,24 +30,6 @@ public class Reserva {
 	private String pago;
 	
 
-
-	public Reserva(ReservaDTO reservasDTO) {
-		this.ingreso = reservasDTO.ingreso();
-		this.salida = reservasDTO.salida();
-		this.valor = reservasDTO.valor();
-		this.pago = reservasDTO.pago();
-	}
-
-
-	public void actualizarReserva(ListadoReserva listadoReserva) {
-		if(listadoReserva.ingreso()!=null) {
-			this.ingreso = listadoReserva.ingreso();
-		}
-		if(listadoReserva.salida()!=null) {
-			this.salida = listadoReserva.salida();
-		}
-
-	}
 
 
 	public Reserva() {

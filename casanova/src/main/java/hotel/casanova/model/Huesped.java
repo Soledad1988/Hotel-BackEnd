@@ -4,8 +4,6 @@ import java.sql.Date;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-import hotel.casanova.dto.HuespedDTO;
-import hotel.casanova.dto.ListadoHuesped;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -38,29 +36,8 @@ public class Huesped {
 	private Date nacimiento;
 	private String nacionalidad;
 	private String telefono;
-	
-	//@ManyToOne(fetch = FetchType.LAZY)
-	//@JoinColumn(name = "codigo") //prueba
 	private Integer codigo;
 	
-	public Huesped(HuespedDTO datosRegistroHuesped) {
-		this.nombre = datosRegistroHuesped.nombre();
-		this.apellido = datosRegistroHuesped.apellido();
-		this.nacimiento = datosRegistroHuesped.nacimiento();
-		this.nacionalidad = datosRegistroHuesped.nacionalidad();
-		this.telefono = datosRegistroHuesped.telefono();
-		this.codigo = datosRegistroHuesped.reserva();
-		
-	}
-
-	public void actualizarDatos(ListadoHuesped listadoHuesped) {
-		if(listadoHuesped.nombre()!=null) {
-			this.nombre = listadoHuesped.nombre();
-		}
-		if(listadoHuesped.apellido()!=null) {
-			this.apellido = listadoHuesped.apellido();
-		}
-		
-	}
+	
 	
 }
