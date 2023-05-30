@@ -12,7 +12,6 @@ public class CasanovaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CasanovaApplication.class, args);
 		
-		//new Relaciones().iniciar();
 	}
 	
 	@Bean
