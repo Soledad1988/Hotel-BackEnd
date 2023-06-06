@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 
 @Table(name="usuarios")
 @Entity(name ="Usuario")
-@Getter
+//@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of ="id")
@@ -30,6 +30,19 @@ public class Usuario implements UserDetails{
 	private Integer id;
 	private String login;
 	private String clave;
+	
+	
+	public Integer getId() {
+		return id;
+	}
+	
+	public String getLogin() {
+		return login;
+	}
+
+	public String getClave() {
+		return clave;
+	}
 	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {

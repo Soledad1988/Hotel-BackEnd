@@ -18,20 +18,20 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 public class SecurityConfiguration {
 
-	//@Autowired
-	//private SecurityFilter securityFilter;
+	@Autowired
+	private SecurityFilter securityFilter;
 	
 	@Bean
 	public SecurityFilterChain securiryFilterChain(HttpSecurity httpSecurity) throws Exception {
 		return httpSecurity.csrf().disable().sessionManagement()
 				.sessionCreationPolicy(SessionCreationPolicy.STATELESS)//le indicamos a Spring el tipo de sesion
-				//.and().authorizeRequests()
-                //.requestMatchers(HttpMethod.POST, "/login")
-                //.permitAll()
-                //.anyRequest()
-                //.authenticated()
+				.and().authorizeRequests()
+                .requestMatchers(HttpMethod.POST, "/login")
+                .permitAll()
+                .anyRequest()
+                .authenticated()
                 .and()
-                //.addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
 				.build();
 	}
 	

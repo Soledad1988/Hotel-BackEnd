@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import hotel.casanova.controller.dto.DatosAutenticacionUsuario;
 import hotel.casanova.model.Usuario;
+import hotel.casanova.service.DatosJWTtoken;
+import hotel.casanova.service.TokenService;
 
 
 @RestController
@@ -21,16 +23,15 @@ public class AutenticacionController {
 	@Autowired
 	private AuthenticationManager autenticationManager;
 	
-	//@Autowired
-	//private TokenService tokenService;
+	@Autowired
+	private TokenService tokenService;
 	
 	@PostMapping
 	public ResponseEntity autenticarUsuario(@RequestBody DatosAutenticacionUsuario datosAutenticacionUsuario) {
 		Authentication authToken = new UsernamePasswordAuthenticationToken(datosAutenticacionUsuario.login(), 
 				datosAutenticacionUsuario.clave());
 		var usuarioAuthenticado = autenticationManager.authenticate(authToken);
-		//var JWTtoken = tokenService.generarToken((Usuario) usuarioAuthenticado.getPrincipal());
-		//return ResponseEntity.ok(new DatosJWTtoken(JWTtoken));
-		return ResponseEntity.ok().build();
+		var JWTtoken = tokenService.generarToken((Usuario) usuarioAuthenticado.getPrincipal());
+		return ResponseEntity.ok(new DatosJWTtoken(JWTtoken));
 	}
 }
