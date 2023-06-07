@@ -31,8 +31,7 @@ public class Huesped {
 	private String nombre;
 	private String apellido;
 	
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
-	//@Temporal(TemporalType.DATE)
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
 	private Date nacimiento;
 	private String nacionalidad;
 	private String telefono;

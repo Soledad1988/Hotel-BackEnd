@@ -22,20 +22,16 @@ public class Reserva {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
 	private Date ingreso;
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
 	private Date salida;
 	private String valor;
 	private String pago;
 	
-
-
-
 	public Reserva() {
 		
 	}
-
 
 	public Reserva(Integer id, Date ingreso, Date salida, String valor, String pago) {
 		this.id = id;
@@ -45,26 +41,21 @@ public class Reserva {
 		this.pago = pago;
 	}
 
-
 	public Integer getId() {
 		return id;
 	}
-
 
 	public Date getIngreso() {
 		return ingreso;
 	}
 
-
 	public Date getSalida() {
 		return salida;
 	}
 
-
 	public String getValor() {
 		return valor;
 	}
-
 
 	public String getPago() {
 		return pago;
