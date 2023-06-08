@@ -1,4 +1,4 @@
-package hotel.casanova.model;
+/*package hotel.casanova.model;
 
 import java.util.Collection;
 import java.util.List;
@@ -73,3 +73,4 @@ public class Usuario implements UserDetails{
 		return true;
 	}
 }
+*/

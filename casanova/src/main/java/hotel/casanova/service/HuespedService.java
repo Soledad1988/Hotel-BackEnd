@@ -17,7 +17,7 @@ public class HuespedService implements IHuespedService{
 	@Override
 	public List<Huesped> verHuesped() {
 		return huespedRepository.findAll();
-	}
+		}
 
 	@Override
 	public void crearHuesped(Huesped huesped) {

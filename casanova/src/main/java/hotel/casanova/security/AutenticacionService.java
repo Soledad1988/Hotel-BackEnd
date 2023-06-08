@@ -1,4 +1,4 @@
-package hotel.casanova.security;
+/*package hotel.casanova.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -23,4 +23,4 @@ public class AutenticacionService implements UserDetailsService{
 
 
 
-}
+}*/

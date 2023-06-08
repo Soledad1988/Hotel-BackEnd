@@ -1,4 +1,4 @@
-package hotel.casanova.security;
+/*package hotel.casanova.security;
 
 import java.io.IOException;
 
@@ -48,4 +48,4 @@ public class SecurityFilter extends OncePerRequestFilter{
 		
 	}
 
-}
+}*/

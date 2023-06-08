@@ -1,4 +1,4 @@
-package hotel.casanova.service;
+/*package hotel.casanova.service;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -26,7 +26,7 @@ public class TokenService {
 		try {
 		    Algorithm algorithm = Algorithm.HMAC256(apiSecret);
 		    return JWT.create()
-			        .withIssuer("hotel_alura")
+			        .withIssuer("hotel")
 			        .withSubject(usuario.getLogin())
 			        .withClaim("id", usuario.getId())
 			        .withExpiresAt(generarFechaExpiracion())
@@ -47,7 +47,7 @@ public class TokenService {
 		try {
             Algorithm algorithm = Algorithm.HMAC256(apiSecret); // validando firma
             verifier = JWT.require(algorithm)
-                    .withIssuer("hotel_alura")
+                    .withIssuer("hotel")
                     .build()
                     .verify(token);
             verifier.getSubject();
@@ -65,4 +65,4 @@ public class TokenService {
 		return LocalDateTime.now().plusHours(2).toInstant(ZoneOffset.of("-05:00"));
 
 	}
-}
+}*/

@@ -1,4 +1,4 @@
-package hotel.casanova.controller;
+/*package hotel.casanova.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -37,3 +37,4 @@ public class AutenticacionController {
 		return ResponseEntity.ok(new DatosJWTtoken(JWTtoken));
 	}
 }
+*/

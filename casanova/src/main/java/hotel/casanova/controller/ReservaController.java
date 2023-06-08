@@ -24,7 +24,6 @@ public class ReservaController {
 	
 	@Autowired
 	private ReservaService reservaService;
-	//private ReservaRepository reservaRepository;
 
 	
 	@PostMapping("")
@@ -39,7 +38,6 @@ public class ReservaController {
        return reservaService.verReserva();
     }
 	
-    //obtiene
     @GetMapping("/{id}")
      public Reserva get(@PathVariable("id") Integer id){
         return reservaService.buscarReserva(id);

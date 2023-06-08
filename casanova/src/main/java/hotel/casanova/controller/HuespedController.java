@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import hotel.casanova.model.Huesped;
 import hotel.casanova.service.HuespedService;
+import jakarta.validation.Valid;
 
 
 @RestController
@@ -25,20 +26,18 @@ public class HuespedController {
 
 	@Autowired
 	private HuespedService huespedService;
-	//private HuespedRepository huespedRepository;
 
 	@PostMapping("")
     public void agregarHuesped(@RequestBody Huesped huesped){
 		huespedService.crearHuesped(huesped);
     }
     
-    @GetMapping("")
+    @GetMapping
     @ResponseBody
     public List<Huesped> verHuesped (){
        return huespedService.verHuesped();
     }
     
-     //obtiene
     @GetMapping("/{id}")
     public Huesped get(@PathVariable("id") Integer id){
        return huespedService.buscarHuesped(id);
