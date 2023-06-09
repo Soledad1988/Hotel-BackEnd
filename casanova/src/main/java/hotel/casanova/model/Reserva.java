@@ -9,6 +9,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
 import lombok.Setter;
 
@@ -23,10 +25,15 @@ public class Reserva {
 	private Integer id;
 
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+	@NotNull(message="ingrese fecha ingreso")
 	private Date ingreso;
+	
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+	@NotNull(message="ingrese fecha ingreso")
 	private Date salida;
+	
 	private String valor;
+	@NotBlank(message="ingrese forma de pago")
 	private String pago;
 	
 	public Reserva() {

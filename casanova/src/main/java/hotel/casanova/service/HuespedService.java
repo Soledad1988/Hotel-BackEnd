@@ -10,14 +10,14 @@ import hotel.casanova.repository.HuespedRepository;
 
 @Service
 public class HuespedService implements IHuespedService{
-
+	
 	@Autowired
 	private HuespedRepository huespedRepository;
 
 	@Override
 	public List<Huesped> verHuesped() {
 		return huespedRepository.findAll();
-		}
+	}
 
 	@Override
 	public void crearHuesped(Huesped huesped) {
@@ -41,7 +41,5 @@ public class HuespedService implements IHuespedService{
 		huespedRepository.save(huesped);
 		
 	}
-	
-	
-	
+
 }

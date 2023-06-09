@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import hotel.casanova.model.Reserva;
 import hotel.casanova.service.ReservaService;
+import jakarta.validation.Valid;
 
 @RestController
 @CrossOrigin(origins="https://localhost:4200")
@@ -27,7 +28,7 @@ public class ReservaController {
 
 	
 	@PostMapping("")
-    public void agregarReserva(@RequestBody Reserva reserva){
+    public void agregarReserva(@RequestBody @Valid Reserva reserva){
 		reservaService.crearReserva(reserva);
 		System.out.println("reserva generada con n° id "+reserva.getId());
     }

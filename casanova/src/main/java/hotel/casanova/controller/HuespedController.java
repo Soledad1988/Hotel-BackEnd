@@ -18,17 +18,16 @@ import hotel.casanova.model.Huesped;
 import hotel.casanova.service.HuespedService;
 import jakarta.validation.Valid;
 
-
 @RestController
 @CrossOrigin(origins="https://localhost:4200")
 @RequestMapping("/huespedes")
 public class HuespedController {
-
+	
 	@Autowired
 	private HuespedService huespedService;
 
 	@PostMapping("")
-    public void agregarHuesped(@RequestBody Huesped huesped){
+    public void agregarHuesped(@RequestBody @Valid Huesped huesped){
 		huespedService.crearHuesped(huesped);
     }
     
@@ -53,6 +52,5 @@ public class HuespedController {
 	  public void actualizar(@RequestBody Huesped huesped){
 		   huespedService.actualizar(huesped);
 	  }
-	
-	
+
 }
