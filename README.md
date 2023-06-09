@@ -29,7 +29,7 @@ Actualmente trabajando en la autenticación JWT :no_entry_sign:
 :heavy_check_mark: Java.
 :heavy_check_mark: SpringBoot.
 :heavy_check_mark: Hibernate - JPA.
-:heavy_check_mark: FlyWey.
+:heavy_check_mark: FlyWay.
 :heavy_check_mark:Validation.
 :heavy_check_mark: MySql.
 :heavy_check_mark: Angular.
