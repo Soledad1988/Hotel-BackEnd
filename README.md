@@ -34,6 +34,9 @@ Actualmente trabajando en la autenticación JWT :no_entry_sign:
 :heavy_check_mark: MySql.
 :heavy_check_mark: Angular.
 
+## Enlace BackEnd
+:link:https://github.com/Soledad1988/Hotel-FrontEnd.git
+
 ## Autor
 <h4>Torres Brenda</h4>
 
