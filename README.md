@@ -34,7 +34,7 @@ Actualmente trabajando en la autenticación JWT :no_entry_sign:
 :heavy_check_mark: MySql.
 :heavy_check_mark: Angular.
 
-## Enlace BackEnd
+## Enlace FrontEnd
 :link:https://github.com/Soledad1988/Hotel-FrontEnd.git
 
 ## Autor
